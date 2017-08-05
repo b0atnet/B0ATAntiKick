@@ -1,0 +1,5 @@
+name: B0ATAntiKick
+main: net.b0at.antikick.B0atAntiKick
+version: 0.3.0
+depend:
+- B0ATBasePlugin
