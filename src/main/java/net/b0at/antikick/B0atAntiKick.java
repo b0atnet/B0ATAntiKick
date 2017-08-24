@@ -41,8 +41,17 @@ public class B0atAntiKick extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(this, this);
     }
 
+    @EventHandler(priority = EventPriority.LOWEST)
+    public void onPlayerKickEventLowest(PlayerKickEvent kickEvent) {
+        handlePlayerKickEvent(kickEvent);
+    }
+
     @EventHandler(priority = EventPriority.MONITOR)
-    public void onPlayerKickEvent(PlayerKickEvent kickEvent) {
+    public void onPlayerKickEventMonitor(PlayerKickEvent kickEvent) {
+        handlePlayerKickEvent(kickEvent);
+    }
+
+    public void handlePlayerKickEvent(PlayerKickEvent kickEvent) {
         String reason = kickEvent.getReason();
         for (String allowedReason : allowedKickReasons) {
             if (reason.contains(allowedReason)) {

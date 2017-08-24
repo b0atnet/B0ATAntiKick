@@ -6,7 +6,7 @@
 
     <groupId>net.b0at</groupId>
     <artifactId>B0atAntiKick</artifactId>
-    <version>0.3.0-SNAPSHOT</version>
+    <version>0.3.1-SNAPSHOT</version>
 
     <repositories>
         <repository>
